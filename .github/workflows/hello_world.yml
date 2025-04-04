@@ -13,11 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Run any script
-        run: echo Hello, world!
+      - name: Say Hello
+        run: echo "Hello World"
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Or whatever version you need
 
       - name: Install dependencies
-        run: npm install 
-        
+        run: npm install
+
       - name: Run tests
         run: npm test
