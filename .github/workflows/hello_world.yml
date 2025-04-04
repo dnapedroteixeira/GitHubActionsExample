@@ -1,0 +1,23 @@
+name: Hello World Example
+
+on: push
+
+jobs:
+  
+  # Job ID 
+  build: 
+  
+    # Use latest ubuntu runner
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Run any script
+        run: echo Hello, world!
+
+      - name: Install dependencies
+        run: npm install 
+        
+      - name: Run tests
+        run: npm test
